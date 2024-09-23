@@ -34,8 +34,8 @@ body {
 .logo {
   display: block;
   z-index: 100;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 
 nav {
@@ -45,7 +45,7 @@ nav {
 .navbar {
   position: sticky;
   top: 0;
-  padding: 1rem 1.5rem;
+  padding: 0.25rem 1rem;
 
   min-height: 70px;
   display: flex;
@@ -97,6 +97,25 @@ nav {
   transition: all 0.3s ease-in-out;
   background-color: var(--color-dark);
   border-radius: 500px;
+}
+
+/*----------------------------header design-----------------------*/
+
+header {
+  background-image: url(images/splash_v3.svg);
+  height: 90.3vh;
+  width: 100vw;
+  background-position: 79% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*----------------------------intro design-----------------------*/
+
+#intro {
+  height: 100vh;
+  width: 100vw;
 }
 
 @media (max-width: 768px) {
@@ -162,6 +181,7 @@ nav {
 
   header {
     align-items: center;
+    background-position: 79% 50%;
   }
 
   .stamp {
@@ -181,6 +201,10 @@ nav {
     color: var(--color-light);
     padding: 10px 10px;
     border-radius: 4px;
+  }
+
+  header {
+    background-position: center;
   }
 }
 
