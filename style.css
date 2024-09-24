@@ -23,6 +23,9 @@
 }
 
 body {
+  font-family: var(--font-paragraph);
+  font-weight: 300;
+  line-height: 1.8;
   margin: 0;
 
   width: 100%;
@@ -109,6 +112,25 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_container {
+  width: 50vw;
+  text-align: left;
+}
+
+#animated_text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 4rem;
+  display: inline-block;
+  white-space: nowrap;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateX(-20px);
+  opacity: 0;
 }
 
 /*----------------------------intro design-----------------------*/
