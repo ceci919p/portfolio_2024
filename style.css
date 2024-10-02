@@ -3,14 +3,19 @@
   /*----------colors----------*/
   --color-darker: #000;
   --color-dark: #ff0f55;
-  --color-accent1: #ff894d;
+  --color-accent1: #0075be;
   --color-accent2: #e835ae;
   --color-light: #fffbff;
   --color-lighter: #fff;
 
   /*----------fonts----------*/
-  --font-display: "Tenor Sans", sans-serif;
+  --font-display: "Gatwick", sans-serif;
   --font-paragraph: "Open Sans", sans-serif;
+}
+
+@font-face {
+  font-family: "Gatwick"; /* Name your font family */
+  src: url("fonts/PPGatwick-JetBold.woff2"); /* Locate the .ttf file within your directory*/
 }
 
 * {
@@ -105,7 +110,7 @@ nav {
 /*----------------------------header design-----------------------*/
 
 header {
-  background-image: url(images/splash_v3.svg);
+  background-image: url(images/splash_v6_2560x1080_test.svg);
   height: 90.3vh;
   width: 100vw;
   background-position: 79% 50%;
@@ -115,22 +120,47 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .text_container {
-  width: 50vw;
+  /*  width: 50vw; */
+  width: auto;
   text-align: left;
 }
 
 #animated_text {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 3rem;
   display: inline-block;
   white-space: nowrap;
   transition: opacity 0.4s ease, transform 0.4s ease;
   transform: translateX(-20px);
   opacity: 0;
+  color: var(--color-accent1);
+}
+
+.clouds {
+  position: absolute;
+  height: 100vh;
+  animation: moveClouds 250s linear infinite;
+}
+
+.clouds1 {
+  left: 0%;
+}
+
+.clouds2 {
+  left: -100%;
+}
+
+.clouds3 {
+  left: -200%;
+}
+
+.clouds4 {
+  left: -300%;
 }
 
 /*----------------------------intro design-----------------------*/
@@ -203,7 +233,7 @@ header {
 
   header {
     align-items: center;
-    background-position: 79% 50%;
+    background-position: 76% 50%;
   }
 
   .stamp {
@@ -231,4 +261,13 @@ header {
 }
 
 @media (min-width: 800px) {
+}
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(450%);
+  }
 }

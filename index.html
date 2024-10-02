@@ -8,7 +8,6 @@
       name="description"
       content="Cecilie Jasmin, aspiring Front-end developer. Check out my portfolio to see projects I’ve worked on so far using my skills in HTML, CSS, and JavaScript."
     />
-
     <meta
       property="og:image"
       content="https://ceciliejasmin.dk/images/meta_img.png"
@@ -18,11 +17,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
     <link rel="stylesheet" href="style.css" />
-
     <title>Cecilie Jasmin</title>
   </head>
   <body>
@@ -55,6 +55,11 @@
     </nav>
 
     <header>
+      <img src="images/skies.svg" alt="Skyer" class="clouds clouds1" />
+      <img src="images/skies.svg" alt="Skyer" class="clouds clouds2" />
+      <img src="images/skies.svg" alt="Skyer" class="clouds clouds3" />
+      <img src="images/skies.svg" alt="Skyer" class="clouds clouds4" />
+
       <div class="text_container">
         <span id="animated_text"></span>
       </div>
@@ -63,6 +68,7 @@
     <section id="intro"></section>
 
     <script src="js/burgermenu.js"></script>
+    <script src="js/clouds.js"></script>
     <script src="js/text.js"></script>
   </body>
 </html>
