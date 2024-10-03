@@ -127,6 +127,8 @@ header {
   /*  width: 50vw; */
   width: auto;
   text-align: left;
+  position: relative;
+  bottom: 15vh;
 }
 
 #animated_text {
@@ -136,9 +138,13 @@ header {
   display: inline-block;
   white-space: nowrap;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  transform: translateX(-20px);
+  /* transform: translateX(-20px); */
   opacity: 0;
   color: var(--color-accent1);
+}
+
+#tree {
+  display: none;
 }
 
 .clouds {
@@ -147,19 +153,19 @@ header {
   animation: moveClouds 250s linear infinite;
 }
 
-.clouds1 {
+#clouds1 {
   left: 0%;
 }
 
-.clouds2 {
+#clouds2 {
   left: -100%;
 }
 
-.clouds3 {
+#clouds3 {
   left: -200%;
 }
 
-.clouds4 {
+#clouds4 {
   left: -300%;
 }
 
@@ -257,6 +263,15 @@ header {
 
   header {
     background-position: center;
+  }
+
+  #tree {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 22vw;
+    display: block;
   }
 }
 
