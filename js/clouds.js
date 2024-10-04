@@ -6,9 +6,9 @@ function resetClouds() {
   clouds.forEach((cloud, index) => {
     // Set the left position based on the index of the cloud
     if (index === 0) {
-      cloud.style.left = "-100%"; // Reset clouds1 to -100%
+      cloud.style.left = "-100vw"; // Reset clouds1 to -100%
     } else {
-      cloud.style.left = `-${(index + 1) * 100}%`; // Reset others to their respective positions
+      cloud.style.left = `-${(index + 1) * 100}vw`; // Reset others to their respective positions
     }
   });
 }

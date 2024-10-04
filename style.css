@@ -23,6 +23,10 @@
   src: url("fonts/PPNeueMontreal-Regular.woff2"); /* Locate the .ttf file within your directory*/
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -135,7 +139,7 @@ header {
   width: auto;
   text-align: left;
   position: relative;
-  bottom: 25vh;
+  bottom: 15vh;
 }
 
 #animated_text {
@@ -156,24 +160,26 @@ header {
 
 .clouds {
   position: absolute;
-  height: 100vh;
-  animation: moveClouds 250s linear infinite;
+  height: auto;
+  animation: moveClouds 150s linear infinite;
+  width: 350vw;
+  top: 5%;
 }
 
 #clouds1 {
-  left: 0%;
+  left: 0vw;
 }
 
 #clouds2 {
-  left: -100%;
+  left: -350vw;
 }
 
 #clouds3 {
-  left: -200%;
+  left: -700vw;
 }
 
 #clouds4 {
-  left: -300%;
+  left: -1050vw;
 }
 
 /*----------------------------intro design-----------------------*/
@@ -258,6 +264,30 @@ header {
   }
 }
 
+/*width / height*/
+@media (min-aspect-ratio: 1/1.8) {
+  /* .clouds {
+    bottom: 5%;
+  } */
+
+  .clouds {
+    animation: moveClouds 250s linear infinite;
+    width: 250vw;
+  }
+
+  #clouds2 {
+    left: -250vw;
+  }
+
+  #clouds3 {
+    left: -500vw;
+  }
+
+  #clouds4 {
+    left: -750vw;
+  }
+}
+
 @media (min-aspect-ratio: 1.05/1) {
   .hideOnDesktop {
     display: none;
@@ -269,12 +299,13 @@ header {
     padding: 10px 10px;
     border-radius: 4px;
   }
-}
 
-/*--------------------tablet-----------------*/
-@media (min-aspect-ratio: 4/3) {
   header {
-    background-position: 56% 50%;
+    background-position: 69% 50%;
+  }
+
+  #animated_text {
+    font-size: 7vh;
   }
 
   #tree {
@@ -287,12 +318,63 @@ header {
     max-height: 300px;
   }
 
-  #animated_text {
-    font-size: 7vh;
+  .clouds {
+    animation: moveClouds 250s linear infinite;
+    width: 125vw;
+    top: 5%;
   }
 
-  .text_container {
-    bottom: 15vh;
+  #clouds2 {
+    left: -125vw;
+  }
+
+  #clouds3 {
+    left: -250vw;
+  }
+
+  #clouds4 {
+    left: -375vw;
+  }
+}
+
+/*--------------------tablet-----------------*/
+@media (min-aspect-ratio: 4/3) {
+  header {
+    background-position: 56% 50%;
+  }
+
+  /* .clouds {
+    animation: moveClouds 250s linear infinite;
+    width: 150vw;
+  }
+
+  #clouds2 {
+    left: -150vw;
+  }
+
+  #clouds3 {
+    left: -300vw;
+  }
+
+  #clouds4 {
+    left: -450vw;
+  } */
+
+  .clouds {
+    animation: moveClouds 250s linear infinite;
+    width: 100vw;
+  }
+
+  #clouds2 {
+    left: -100vw;
+  }
+
+  #clouds3 {
+    left: -200vw;
+  }
+
+  #clouds4 {
+    left: -300vw;
   }
 }
 
@@ -312,9 +394,9 @@ header {
 
 @keyframes moveClouds {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0vw);
   }
   100% {
-    transform: translateX(450%);
+    transform: translateX(400vw); /* Clouds will move from left to right */
   }
 }
