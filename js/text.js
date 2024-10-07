@@ -1,28 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const words = [
-    "Frontend Developer",
-    "UI/UX Designer",
-    "Content Creator",
-    "Digital Designer",
-    "CECILIE JASMIN",
-  ];
-  const textElement = document.getElementById("animated_text");
-  let wordIndex = 0;
+const introH1 = document.querySelector("#intro h1");
 
-  function changeWord() {
-    if (wordIndex < words.length) {
-      textElement.style.opacity = 0; // Fade out
-      // textElement.style.transform = "translateX(-20px)";
+// Function to check if the h1 is in view
+function checkScroll() {
+  const introPosition = introH1.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3; // Adjust when to trigger
 
-      setTimeout(() => {
-        textElement.textContent = words[wordIndex]; // replace text
-        // textElement.style.transform = "translateX(0)";
-        textElement.style.opacity = 1; // Fade in
-        wordIndex++;
-        setTimeout(changeWord, 400); // Time between words
-      }, 400); // Fade out time
-    }
+  if (introPosition < screenPosition) {
+    introH1.classList.add("visible");
   }
+}
 
-  changeWord(); // Start animation
-});
+// Event listener for scrolling
+window.addEventListener("scroll", checkScroll);
