@@ -227,6 +227,51 @@ header {
   padding-right: 50px; /* Add space between spans */
 }
 
+/*----------------------------project section-----------------------*/
+
+.p-container {
+  position: relative;
+  cursor: pointer;
+  margin-inline: 1.5vw;
+  margin-bottom: 1.5vw;
+}
+
+.p-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(254, 51, 113, 0.75);
+}
+
+.p-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 11vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
 /*----------------------------media queries----------------------*/
 
 @media (max-width: 768px) {
@@ -413,6 +458,23 @@ header {
 
   #clouds4 {
     left: -300vw;
+  }
+
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-inline: 0.5vw;
+    gap: 0.5vw;
+  }
+
+  .p-container {
+    margin-inline: 0;
+    margin-block: 0;
+  }
+
+  .text {
+    font-size: 5vw;
   }
 }
 
