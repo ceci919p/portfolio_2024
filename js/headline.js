@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "UI/UX Designer",
     "Content Creator",
     "Digital Designer",
-    "CECILIE JASMIN",
+    "Cecilie Jasmin",
   ];
   const textElement = document.getElementById("animated_text");
   let wordIndex = 0;

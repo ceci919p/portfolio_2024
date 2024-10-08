@@ -2,7 +2,7 @@
 :root {
   /*----------colors----------*/
   --color-darker: #000;
-  --color-dark: #ff0f55;
+  --color-dark: #fe3371;
   --color-accent1: #0075be;
   --color-accent2: #e835ae;
   --color-light: #fffbff;
@@ -204,6 +204,29 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
+
+/*----------------------------marquee-----------------------*/
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  font-family: var(--font-display);
+  color: var(--color-dark);
+  opacity: 75%;
+  font-size: 5rem;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-content span {
+  padding-right: 50px; /* Add space between spans */
+}
+
 /*----------------------------media queries----------------------*/
 
 @media (max-width: 768px) {
@@ -413,5 +436,14 @@ header {
   }
   100% {
     transform: translateX(400vw); /* Clouds will move from left to right */
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
