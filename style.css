@@ -23,8 +23,45 @@
   src: url("fonts/PPNeueMontreal-Regular.woff2"); /* Locate the .ttf file within your directory*/
 }
 
+p {
+  margin-bottom: 2.5rem;
+  max-width: 65ch;
+}
+
+h1,
+h2,
+h4 {
+  margin: 3rem 0 1.38rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 3.052rem;
+  margin-top: 2.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+  margin-top: 1rem;
+  margin: 1rem 0 1.38rem;
+  font-family: var(--font-display);
+  font-weight: bolder;
+  line-height: 1.3;
+}
+
+h4 {
+  margin-top: 0;
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 * {
@@ -193,14 +230,14 @@ header {
   padding-inline: 2vw;
 }
 
-#intro h1 {
+#intro h2 {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   font-size: 3rem;
 }
 
-#intro h1.visible {
+#intro h2.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -229,14 +266,14 @@ header {
 
 /*----------------------------project section-----------------------*/
 
-.p-container {
+.p_container {
   position: relative;
   cursor: pointer;
   margin-inline: 1.5vw;
   margin-bottom: 1.5vw;
 }
 
-.p-img {
+.p_img {
   display: block;
   width: 100%;
   height: auto;
@@ -255,7 +292,7 @@ header {
   background-color: rgba(254, 51, 113, 0.75);
 }
 
-.p-container:hover .overlay {
+.p_container:hover .overlay {
   opacity: 1;
 }
 
@@ -277,6 +314,38 @@ header {
 #contact {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#c_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#s_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+#s_btn {
+  border: 2px solid #fe3371;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 25vw;
+  border-radius: 3px;
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+.s_link {
+  text-decoration: none;
+  color: var(--color-dark);
 }
 
 /*----------------------------media queries----------------------*/
@@ -425,6 +494,31 @@ header {
   #clouds4 {
     left: -375vw;
   }
+
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-inline: 0.5vw;
+    gap: 0.5vw;
+  }
+
+  .p_container {
+    margin-inline: 0;
+    margin-block: 0;
+  }
+
+  .text {
+    font-size: 5vw;
+  }
+
+  #s_container {
+    flex-direction: row;
+  }
+
+  #s_btn {
+    padding: 1vh 6vw;
+  }
 }
 
 /*--------------------tablet-----------------*/
@@ -465,23 +559,6 @@ header {
 
   #clouds4 {
     left: -300vw;
-  }
-
-  #projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-inline: 0.5vw;
-    gap: 0.5vw;
-  }
-
-  .p-container {
-    margin-inline: 0;
-    margin-block: 0;
-  }
-
-  .text {
-    font-size: 5vw;
   }
 }
 

@@ -13,7 +13,7 @@
 // // Event listener for scrolling
 // window.addEventListener("scroll", checkScroll);
 
-const introH1 = document.querySelector("#intro h1");
+const introH1 = document.querySelector("#intro h2");
 
 // Function to check if the h1 is in view
 function checkScroll() {

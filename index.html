@@ -34,13 +34,13 @@
 
       <ul class="nav_menu">
         <li class="nav_item">
-          <a href="#" class="nav_link">About me</a>
+          <a href="#intro" class="nav_link">About me</a>
         </li>
         <li class="nav_item">
           <a href="#" class="nav_link">Tech Stack</a>
         </li>
         <li class="nav_item">
-          <a href="#" class="nav_link">Portfolio</a>
+          <a href="#projects" class="nav_link">Projects</a>
         </li>
         <li class="nav_item">
           <a
@@ -70,92 +70,109 @@
       <img src="images/clouds.svg" alt="Clouds" class="clouds" id="clouds4" />
 
       <div class="text_container">
-        <span id="animated_text"></span>
+        <h1 id="animated_text"></h1>
       </div>
     </header>
 
     <section id="intro">
-      <h1>I’m Cecilie Jasmin, a digital designer.</h1>
+      <h2>I’m Cecilie Jasmin, a digital designer.</h2>
     </section>
 
     <div class="marquee">
-      <span class="marquee-content">This is a simple marquee animation!</span>
+      <span class="marquee-content">~ OPEN TO WORK ~ OPEN TO WORK ~ </span>
     </div>
 
     <section id="projects">
-      <div class="p-container">
+      <div class="p_container">
         <img
-          class="p-img"
+          class="p_img"
           src="images/kv_thumbnail.webp"
           alt="mockup of a 2023 project called kattens værn redesign"
         />
         <div class="overlay">
-          <p class="text">Kattens Værn</p>
+          <h3 class="text">Kattens Værn</h3>
         </div>
       </div>
 
-      <div class="p-container">
+      <div class="p_container">
         <img
-          class="p-img"
+          class="p_img"
           src="images/hh_thumbnail.webp"
           alt="mockup of a 2022 project called hacked hogwarts"
         />
         <div class="overlay">
-          <p class="text">Hacked Hogwarts</p>
+          <h3 class="text">Hacked Hogwarts</h3>
         </div>
       </div>
 
-      <div class="p-container">
+      <div class="p_container">
         <img
-          class="p-img"
+          class="p_img"
           src="images/f_thumbnail.webp"
           alt="mockup of a 2021 project called foxholm"
         />
         <div class="overlay">
-          <p class="text">Foxholm</p>
+          <h3 class="text">Foxholm</h3>
         </div>
       </div>
 
-      <div class="p-container">
+      <div class="p_container">
         <img
-          class="p-img"
+          class="p_img"
           src="images/g_thumbnail.webp"
           alt="mockup of a 2021 game project"
         />
         <div class="overlay">
-          <p class="text">Game</p>
+          <h3 class="text">Game</h3>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Let's Connect</h2>
+      <div id="c_wrapper">
+        <h2>Let's Connect</h2>
 
-      <div id="s_container">
-        <div>
-          <a
-            class="foot_link"
-            href="https://github.com/ceci919p?tab=repositories"
-            target="_blank"
-          >
-            Github
-          </a>
-        </div>
+        <div id="s_container">
+          <div id="s_btn">
+            <a
+              class="s_link"
+              href="https://github.com/ceci919p?tab=repositories"
+              target="_blank"
+            >
+              Github
+            </a>
+          </div>
 
-        <div>
-          <a
-            class="foot_link"
-            href="https://www.linkedin.com/in/cecilie-jasmin/"
-          >
-            Linkedin</a
-          >
-        </div>
+          <div id="s_btn">
+            <a
+              class="s_link"
+              href="https://www.linkedin.com/in/cecilie-jasmin/"
+            >
+              Linkedin</a
+            >
+          </div>
 
-        <div>
-          <a class="foot_link" href="mailto:ceci919p@stud.kea.dk">Send mail</a>
+          <div id="s_btn">
+            <a class="s_link" href="mailto:ceci919p@stud.kea.dk">Send mail</a>
+          </div>
         </div>
       </div>
     </section>
+
+    <footer>
+      <p>© Cecilie Jasmin 2024</p>
+
+      <div id="socials_container">
+        <img
+          src="images/github_icon.svg"
+          alt="icon, which leads to my github page"
+        />
+        <img
+          src="images/linkedin_icon.svg"
+          alt="icon, which leads to my linkedin page"
+        />
+      </div>
+    </footer>
 
     <script src="js/burgermenu.js"></script>
     <script src="js/clouds.js"></script>
