@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
   const words = [
     "Frontend Developer",
     "UI/UX Designer",
@@ -25,4 +25,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   changeWord(); // Start animation
-});
+}); */

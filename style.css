@@ -24,7 +24,7 @@
 }
 
 p {
-  margin-bottom: 2.5rem;
+  /* margin-bottom: 2.5rem; */
   max-width: 65ch;
 }
 
@@ -187,7 +187,7 @@ header {
   white-space: nowrap;
   transition: opacity 0.4s ease, transform 0.4s ease;
   /* transform: translateX(-20px); */
-  opacity: 0;
+  opacity: 1;
   color: var(--color-accent1);
 }
 
@@ -234,10 +234,30 @@ header {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  font-size: 3rem;
+
+  font-size: 1.5rem;
 }
 
 #intro h2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#intro h2 span {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: inline-block;
+  width: 15ch; /* Set a width large enough for the longest word */
+  text-align: left; /* Align text within the span */
+  white-space: nowrap; /* Prevent words from breaking to the next line */
+  overflow: hidden; /* Prevent overflow of words */
+}
+
+#intro h2 span.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#intro h2 span.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
@@ -348,6 +368,22 @@ header {
   color: var(--color-dark);
 }
 
+/*----------------------------fade scroll effect-----------------------*/
+
+.fade-section h2,
+.fade-section div {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* For the visible state */
+.fade-section h2.visible,
+.fade-section div.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*----------------------------media queries----------------------*/
 
 @media (max-width: 768px) {
@@ -455,8 +491,8 @@ header {
   #contact_btn {
     background-color: black;
     color: var(--color-light);
-    padding: 10px 10px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 3px;
   }
 
   header {
@@ -567,6 +603,10 @@ header {
   header {
     background-position: center;
     height: 100vh;
+  }
+
+  #intro h2 {
+    font-size: 3rem;
   }
 }
 
