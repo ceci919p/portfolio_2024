@@ -630,11 +630,15 @@ footer {
   #socials_container {
     grid-column: 3;
     justify-self: end;
+    padding-inline-end: 2vw;
   }
 
-  section,
-  footer {
+  section {
     padding-inline: 2vw;
+  }
+
+  footer {
+    padding-inline: 0;
     padding-block-end: 2vh;
   }
 }
