@@ -112,14 +112,15 @@ window.addEventListener("scroll", checkScroll); */
 //------
 
 const introH1 = document.querySelector("#intro h2");
-const introSpan = document.querySelector("#intro h2 span");
+const introSpan = document.querySelector("#intro span");
 
 // Array of words to cycle through
 const words = [
-  "a digital designer",
-  "a UI/UX enthusiast",
-  "a frontend developer",
-  "a problem solver",
+  "digital designer",
+  "content creator",
+  "UI/UX designer",
+  "frontend developer",
+  "graphic designer",
 ];
 let wordIndex = 0;
 let isAnimating = false;
