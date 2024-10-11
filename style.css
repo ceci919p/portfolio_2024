@@ -292,19 +292,19 @@ header {
 }
 
 .item {
-  width: 1000px;
+  width: 625px;
   height: 100px;
   font-size: 3.25rem;
-  background-color: lightgray;
+  color: rgba(254, 51, 113, 0.75);
   position: absolute;
-  left: max(calc(1000px * 4), 100%);
+  left: max(calc(625px * 8), 100%);
   animation: scroll_left 30s linear infinite;
   font-family: var(--font-display);
-  animation-delay: calc(30s / 4 * (4 - var(--n)) * -1);
+  animation-delay: calc(30s / 8 * (8 - var(--n)) * -1);
 }
 
 .scroll_wrapper:hover .item {
-  animation-play-state: paused; /* Pause all item animations */
+  animation-play-state: paused;
 }
 
 /* .item1 {
@@ -763,6 +763,6 @@ footer {
 
 @keyframes scroll_left {
   to {
-    left: -1000px;
+    left: -625px;
   }
 }
