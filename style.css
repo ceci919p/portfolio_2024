@@ -303,6 +303,10 @@ header {
   animation-delay: calc(30s / 4 * (4 - var(--n)) * -1);
 }
 
+.scroll_wrapper:hover .item {
+  animation-play-state: paused; /* Pause all item animations */
+}
+
 /* .item1 {
   animation-delay: calc(30s / 4 * (4 - 1) * -1);
 }
