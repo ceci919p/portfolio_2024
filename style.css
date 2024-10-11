@@ -292,16 +292,18 @@ header {
 }
 
 .item {
-  width: 550px;
+  width: 1000px;
   height: 100px;
-  font-size: 4rem;
+  font-size: 3.25rem;
   background-color: lightgray;
   position: absolute;
-  left: max(calc(550px * 4), 100%);
+  left: max(calc(1000px * 4), 100%);
   animation: scroll_left 30s linear infinite;
+  font-family: var(--font-display);
+  animation-delay: calc(30s / 4 * (4 - var(--n)) * -1);
 }
 
-.item1 {
+/* .item1 {
   animation-delay: calc(30s / 4 * (4 - 1) * -1);
 }
 
@@ -315,12 +317,13 @@ header {
 
 .item4 {
   animation-delay: calc(30s / 4 * (4 - 4) * -1);
-}
+} */
 
-/* .item5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-}
-
+/*
+.item5 {
+  animation-delay: calc(30s / 5 * (5 - 5) * -1);
+} */
+/*
 .item6 {
   animation-delay: calc(30s / 8 * (8 - 6) * -1);
 }
@@ -756,6 +759,6 @@ footer {
 
 @keyframes scroll_left {
   to {
-    left: -550px;
+    left: -1000px;
   }
 }
