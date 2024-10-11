@@ -25,7 +25,7 @@
 
 p {
   /* margin-bottom: 2.5rem; */
-  max-width: 65ch;
+  /*max-width: 65ch;*/
 }
 
 h1,
@@ -68,9 +68,14 @@ html {
   margin: 0px;
   padding: 0px;
   list-style: none;
-  box-sizing: border-box;
   overflow-wrap: break-word;
   text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -273,27 +278,60 @@ header {
   transform: translateY(0);
 }
 
-/*----------------------------marquee-----------------------*/
+/*----------------------------scroller-----------------------*/
 
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
+.scroll_wrapper {
+  border: 1px solid black;
+
+  margin-inline: auto;
   position: relative;
-  font-family: var(--font-display);
-  color: var(--color-dark);
-  opacity: 75%;
-  font-size: 3rem;
+  height: 100px;
+
+  margin-block: 5rem;
+  overflow: hidden;
 }
 
-.marquee-content {
-  display: inline-block;
-  animation: marquee 15s linear infinite;
+.item {
+  width: 550px;
+  height: 100px;
+  font-size: 4rem;
+  background-color: lightgray;
+  position: absolute;
+  left: max(calc(550px * 4), 100%);
+  animation: scroll_left 30s linear infinite;
 }
 
-.marquee-content + .marquee-content {
-  padding-left: 50px; /* Add space between spans */
+.item1 {
+  animation-delay: calc(30s / 4 * (4 - 1) * -1);
 }
+
+.item2 {
+  animation-delay: calc(30s / 4 * (4 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 4 * (4 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 4 * (4 - 4) * -1);
+}
+
+/* .item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+} */
 
 /*----------------------------project section-----------------------*/
 #projects {
@@ -716,11 +754,8 @@ footer {
   }
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
+@keyframes scroll_left {
   to {
-    transform: translateX(-200%);
+    left: -550px;
   }
 }
