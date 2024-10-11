@@ -291,8 +291,8 @@ header {
   animation: marquee 15s linear infinite;
 }
 
-.marquee-content span {
-  padding-right: 50px; /* Add space between spans */
+.marquee-content + .marquee-content {
+  padding-left: 50px; /* Add space between spans */
 }
 
 /*----------------------------project section-----------------------*/
@@ -721,6 +721,6 @@ footer {
     transform: translateX(100%);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
