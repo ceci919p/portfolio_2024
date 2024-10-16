@@ -413,7 +413,7 @@ header {
   width: 100%;
 }
 
-#s_btn {
+.btn {
   border: 2px solid #fe3371;
   display: flex;
   justify-content: center;
@@ -424,9 +424,88 @@ header {
   cursor: pointer;
 }
 
-.s_link {
+.link {
   text-decoration: none;
   color: var(--color-dark);
+}
+
+/*----------------------------project subpage-----------------------*/
+
+.p_header {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(images/project_splash_2.svg);
+  background-position: 46% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-inline: 0;
+  height: 60vh;
+}
+
+.top_section {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 4vw;
+  padding-top: 1vh;
+}
+
+.p_tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.p_tags li {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.middle_section {
+  position: relative;
+}
+
+.p_splash {
+  position: absolute;
+  width: 90vw;
+  max-width: 250px;
+  top: 0; /* Position at the top */
+  left: 50%; /* Horizontal centering */
+  transform: translateX(-50%); /* Correct centering */
+  z-index: 10; /* Make sure it's on top of the scroll_wrapper */
+}
+
+.p_intro {
+  background-color: var(--color-lighter);
+}
+
+#kv_scroll {
+  margin-block-end: 0;
+}
+
+#kv_scroll.left {
+  margin-top: 5rem;
+}
+
+#kv_scroll.right {
+  margin-bottom: 5rem;
+}
+
+#kv_scroll.right > .item,
+#kv_scroll.left > .item {
+  width: 800px;
+  height: 100px;
+  font-size: 3.6rem;
+}
+
+#kv_scroll.left > .item {
+  animation: kv_scroll_left 80s linear infinite;
+  animation-delay: calc(80s / 8 * (8 - var(--n)) * -1);
+}
+
+#kv_scroll.right > .item {
+  left: -800px;
+  animation: kv_scroll_right 80s linear infinite;
+  font-family: var(--font-display);
+  animation-delay: calc(80s / 8 * (8 - var(--n)) * -1);
 }
 
 /*----------------------------footer-----------------------*/
@@ -436,6 +515,7 @@ footer {
   justify-content: space-between;
   padding-inline: 4vw;
   align-items: center;
+  margin-top: 1vh;
 }
 
 /*----------------------------fade scroll effect-----------------------*/
@@ -636,7 +716,7 @@ footer {
     gap: 1.5vw;
   }
 
-  #s_btn {
+  .btn {
     width: 150px;
     padding: 0.5vh;
   }
@@ -690,6 +770,10 @@ footer {
 
   #box_container {
     flex-direction: row;
+  }
+
+  .p_tags {
+    display: flex;
   }
 }
 
@@ -760,6 +844,18 @@ footer {
 @keyframes scroll_left {
   to {
     left: -725px;
+  }
+}
+
+@keyframes kv_scroll_left {
+  to {
+    left: -750px;
+  }
+}
+
+@keyframes kv_scroll_right {
+  to {
+    left: calc(700px * 8); /* Slut uden for højre kant */
   }
 }
 
