@@ -114,6 +114,7 @@ section {
 }
 
 .pink_fill {
+  border: 2px solid #fe3371;
   background-color: var(--color-dark);
   color: white;
 }
