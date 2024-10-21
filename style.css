@@ -13,11 +13,12 @@
 
   /*----------scroller----------*/
 
-  --scroller-item-width: 725px; /* Default width */
+  /*default values*/
+  --scroller-item-width: 725px;
   --scroller-item-height: 100px;
   --scroller-item-font-size: 3.6rem;
   --scroller-item-color: rgba(254, 51, 113, 0.75);
-  --scroller-animation-duration: 30s; /* Default animation duration */
+  --scroller-animation-duration: 30s;
 }
 
 @font-face {
@@ -323,7 +324,7 @@ header {
   font-size: var(--scroller-item-font-size);
   color: var(--scroller-item-color);
   position: absolute;
-  left: max(calc(725px * 8), 100%);
+  left: max(calc(var(--scroller-item-width) * 8), 100%);
   animation: scroll_left var(--scroller-animation-duration) linear infinite;
   font-family: var(--font-display);
   animation-delay: calc(
@@ -332,33 +333,25 @@ header {
 }
 
 .scroll_wrapper.left {
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 0;
 }
 
 .scroll_wrapper.right {
-  margin-bottom: 3rem;
-  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.scroll_wrapper.left > .item {
+  left: max(calc(725px * 8), 100%);
 }
 
 .scroll_wrapper.right > .item {
-  left: calc(725px * -1);
+  left: calc(var(--scroller-item-width) * -1);
   animation: scroll_right var(--scroller-animation-duration) linear infinite;
   animation-delay: calc(
     var(--scroller-animation-duration) / 8 * (8 - var(--n)) * -1
   );
 }
-
-/* #kv_scroll.right > .item {
-  left: calc(var(--scroller-item-width) * -1);
-  animation: kv_scroll_right 80s linear infinite;
-  font-family: var(--font-display);
-  animation-delay: calc(80s / 8 * (8 - var(--n)) * -1);
-} */
-
-/* .scroll_wrapper:hover .item {
-  animation-play-state: paused;
-} */
 
 /*----------------------------interests-----------------------*/
 
@@ -512,10 +505,10 @@ header {
   position: absolute;
   width: 90vw;
   max-width: 250px;
-  top: 0; /* Position at the top */
-  left: 50%; /* Horizontal centering */
-  transform: translateX(-50%); /* Correct centering */
-  z-index: 10; /* Make sure it's on top of the scroll_wrapper */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
 .p_intro {
@@ -539,13 +532,6 @@ header {
   display: flex;
   flex-direction: column;
   margin-block: 2vh;
-}
-
-#kv_scroll.right > .item {
-  left: calc(var(--scroller-item-width) * -1);
-  animation: kv_scroll_right 80s linear infinite;
-  font-family: var(--font-display);
-  animation-delay: calc(80s / 8 * (8 - var(--n)) * -1);
 }
 
 /*----------------------------footer-----------------------*/
@@ -587,7 +573,6 @@ footer {
     z-index: 100;
   }
 
-  /* .ba changed to .bar (mispelling) */
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -899,13 +884,17 @@ footer {
 
 @keyframes scroll_left {
   to {
-    left: calc(725px * -1); /* Use negative of the width */
+    left: calc(
+      var(--scroller-item-width) * -1
+    ); /* Move to left outside viewport with negative value*/
   }
 }
 
 @keyframes scroll_right {
   to {
-    left: calc(725px * 8); /* Slut uden for højre kant */
+    left: calc(
+      725px * 8
+    ); /* move to right outside viewport with positive value */
   }
 }
 
