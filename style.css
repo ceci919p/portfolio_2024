@@ -342,7 +342,7 @@ header {
 }
 
 .scroll_wrapper.left > .item {
-  left: max(calc(725px * 8), 100%);
+  left: max(calc(var(--scroller-item-width) * 8), 100%);
 }
 
 .scroll_wrapper.right > .item {
@@ -893,7 +893,7 @@ footer {
 @keyframes scroll_right {
   to {
     left: calc(
-      725px * 8
+      (var(--scroller-item-width) * 1) * 8
     ); /* move to right outside viewport with positive value */
   }
 }
