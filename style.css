@@ -551,6 +551,17 @@ header {
   font-size: 1.5rem;
 }
 
+.p_description {
+  opacity: 0; /* Start fully transparent */
+  transform: translateY(20px); /* Start slightly lower */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+.p_description.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up into place */
+}
+
 .p_intro_btn {
   gap: 1vh;
   display: flex;
@@ -592,6 +603,8 @@ header {
 
 #work_areas_wrapper {
   gap: 3vw;
+  flex-direction: column;
+  height: auto;
 }
 
 .p_section_fill div {
@@ -956,13 +969,6 @@ footer {
     max-width: 70.5ch;
   }
 
-  .p_section {
-    height: 100vh;
-    width: 100vw;
-
-    margin-top: 5rem;
-  }
-
   .p_intro_txt_container {
     gap: 2vw;
   }
@@ -983,6 +989,12 @@ footer {
 
   .p_section {
     margin-bottom: 3vh;
+  }
+
+  #work_areas_wrapper {
+    gap: 3vw;
+    flex-direction: row;
+    height: 100vh;
   }
 }
 
@@ -1017,6 +1029,13 @@ footer {
 
   .p_section_fill {
     padding-inline: 0.5vw;
+  }
+
+  .p_section {
+    height: 100vh;
+    width: 100vw;
+
+    margin-top: 5rem;
   }
 }
 
