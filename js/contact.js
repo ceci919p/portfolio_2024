@@ -1,6 +1,6 @@
 // Select all elements (h2, div, etc.) inside sections with the class .fade-section
 const fadeElements = document.querySelectorAll(
-  ".fade-section h2, .fade-section div"
+  ".fade-h2, .fade-div, .fade-section"
 );
 
 // Function to check if each element is in view

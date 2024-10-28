@@ -51,12 +51,11 @@
         <a class="back_link" href="index.html#list">
           <div class="back">← back</div>
         </a>
-        <ul class="p_tags">
+        <!--   <ul class="p_tags">
           <li>BUSINESS</li>
           <li>REDESIGN</li>
-          <li>CHAKRA UI</li>
-          <li>NEXT.JS</li>
-        </ul>
+          <li>FRONTEND DEVELOPMENT</li>
+        </ul> -->
       </div>
 
       <div class="middle_section">
@@ -231,19 +230,31 @@
     </section>
 
     <section class="p_intro">
-      <div class="p_year">
-        <p>year</p>
-        <p class="year">2023</p>
-      </div>
+      <div class="p_intro_wrapper">
+        <div class="p_year">
+          <p>year</p>
+          <p class="year">2023</p>
+        </div>
 
-      <div class="p_intro_txt">
-        <p>
-          Kattens Værn is an organization focused on helping stray cats in
-          Denmark. Despite having a lot of daily users on their website, they
-          struggled to convert these into donations and adoptions. They wanted
-          to simplify and modernize their website as a way to solve this
-          problem.
-        </p>
+        <div class="p_intro_txt_container">
+          <div class="p_intro_txt">
+            <h4>PROCESS & PM</h4>
+            <p>
+              DESIGN THINKING <br />
+              SCRUM BOARD <br />
+              DAILY SCRUM <br />BURNDOWN CHART
+            </p>
+          </div>
+
+          <div class="p_intro_txt">
+            <h4>RESEARCH & ANALYSIS</h4>
+            <p>
+              BMC <br />SWOT/TOWS <br />
+              SURVEYS<br />
+              CARD SORTING
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="p_intro_btn">
@@ -265,8 +276,79 @@
       </div>
     </section>
 
-    <section class="p_first_section">
-      <img src="" alt="" />
+    <section class="p_section_fill">
+      <div>
+        <p class="p_description">
+          Kattens Værn is an organization that helps stray cats in Denmark.
+          Despite having a lot of daily users on their website, they struggled
+          to convert these into more donations and adoptions. They wanted our
+          help to simplify and modernize their website as a way to solve this
+          problem.
+        </p>
+      </div>
+    </section>
+
+    <section class="p_section">
+      <img
+        class="p_img fade_img"
+        src="images/kv_design.webp"
+        alt="mockup of the landingpage of the website kattens vaern"
+      />
+
+      <div class="p_txt txt_left">
+        <h3>Design</h3>
+        <p>
+          It was concluded that the website consisted of too much
+          information;<br />
+          the navigation was confusing with "hidden pages" and labels didn't
+          always make sense. The layout of the website wasn't consistent and did
+          not comply with the conventions which gave an messy and unprofessional
+          vibe. Our main focus was to simplify the IA and modernize the website
+          with a new visual ID. <br /><br />
+          The colorpalette was made in neutral colors that didn't take attention
+          away from the most important part - the cats. To highlight important
+          options such as donation a warm pink was used as a secondary color. A
+          cold blue was used for contrast to catch the eye of the user. Lastly,
+          a new logo was created to work better on digital screens.
+
+          <br /><br />
+          When asking the target group, transparency was one of the most
+          important things when deciding to donate to an organization. To get a
+          look "behind the scenes" we filmed and edited a video which introduces
+          the organization and gives an insight to their work.
+        </p>
+      </div>
+    </section>
+
+    <section class="p_section">
+      <img
+        class="p_img fade_img"
+        src="images/kv_code.svg"
+        alt="mockup of the landingpage of the website kattens vaern"
+      />
+
+      <div class="p_txt">
+        <h3>Code</h3>
+        <p>
+          The website was built using WordPress as our backend/database. To add
+          an article to a listview e.g. a cat to a list of cats ready for
+          adoption, we used posts and the plugin "custom fields".
+          <br /><br />
+
+          The frontend was built with Next.js to fetch data from WordPress using
+          getStaticProps which is more sustainable. A consistent design was
+          ensured by using Chakra UI as a component and theme tool.
+          <br /><br />
+          We coded simultaneously using git branches and pushing those to the
+          main branch. This would trigger Netlify to build and update the
+          changes to the website/client side. With static site generation, which
+          means HTML is generated on build time, Netlify would only update
+          changes this way. Since we wanted employees of Kattens Værn to be able
+          to potentially add cats themselves through WordPress, we added the
+          plugin "WP Webhooks" which triggers netlifly to build every time
+          WordPress data changes.
+        </p>
+      </div>
     </section>
 
     <footer>
@@ -289,4 +371,6 @@
       </div>
     </footer>
   </body>
+  <script src="js/scroll_section.js"></script>
+  <script src="js/txt_section.js"></script>
 </html>
