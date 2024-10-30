@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="style.css" />
-    <title>Kattens Vaern</title>
+    <title>Foxholm</title>
   </head>
   <body>
     <nav class="navbar">
@@ -19,13 +19,14 @@
 
       <ul class="nav_menu">
         <li class="nav_item">
-          <a href="#intro" class="nav_link">About me</a>
+          <a href="kv.html" class="nav_link">Kattens Værn</a>
         </li>
         <li class="nav_item">
-          <a href="#" class="nav_link">Tech Stack</a>
+          <a href="hacked.html" class="nav_link">Hacked Hogwarts</a>
         </li>
+
         <li class="nav_item">
-          <a href="#projects" class="nav_link">Projects</a>
+          <a href="animation.html" class="nav_link">Animation</a>
         </li>
         <li class="nav_item">
           <a
@@ -51,23 +52,17 @@
         <a class="back_link" href="index.html#list">
           <div class="back">← back</div>
         </a>
-        <ul class="p_tags">
-          <li>BUSINESS</li>
-          <li>REDESIGN</li>
-          <li>CHAKRA UI</li>
-          <li>NEXT.JS</li>
-        </ul>
       </div>
 
       <div class="middle_section">
-        <img class="p_splash" src="images/kv_splash_big.webp" alt="laptop" />
+        <img class="p_splash" src="images/f_splash_big.webp" alt="laptop" />
 
         <div class="scroll_wrapper left">
           <div
             class="item item1"
             style="
               --n: 1;
-              --scroller-item-width: 500px;
+              --scroller-item-width: 769px;
               --scroller-animation-duration: 80s;
             "
           >
@@ -231,25 +226,37 @@
     </section>
 
     <section class="p_intro">
-      <div class="p_year">
-        <p>year</p>
-        <p class="year">2023</p>
-      </div>
+      <div class="p_intro_wrapper">
+        <div class="p_year">
+          <p>year</p>
+          <p class="year">2021</p>
+        </div>
 
-      <div class="p_intro_txt">
-        <p>
-          Kattens Værn is an organization focused on helping stray cats in
-          Denmark. Despite having a lot of daily users on their website, they
-          struggled to convert these into donations and adoptions. They wanted
-          to simplify and modernize their website as a way to solve this
-          problem.
-        </p>
+        <div class="p_intro_txt_container">
+          <div class="p_intro_txt">
+            <h4>PROCESS & PM</h4>
+            <p>
+              DESIGN THINKING <br />
+              SCRUM BOARD <br />
+              DAILY SCRUM <br />BURNDOWN CHART
+            </p>
+          </div>
+
+          <div class="p_intro_txt">
+            <h4>RESEARCH & ANALYSIS</h4>
+            <p>
+              BMC <br />SWOT/TOWS <br />
+              SURVEYS<br />
+              CARD SORTING
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="p_intro_btn">
         <a
           class="link"
-          href="https://github.com/PandaPoob/kv_eksamen"
+          href="https://github.com/ceci919p/foxholm"
           target="_blank"
         >
           <div class="btn pink">Github</div></a
@@ -257,7 +264,7 @@
 
         <a
           class="link"
-          href="https://new-eksamen-kv.netlify.app/"
+          href="https://ceciliejasmin.dk/kea/10_eksamensprojekt/foxholm/wordpress/"
           target="_blank"
         >
           <div class="btn pink_fill">Visit Page</div></a
@@ -265,8 +272,93 @@
       </div>
     </section>
 
-    <section class="p_first_section">
-      <img src="" alt="" />
+    <section class="p_section_fill">
+      <div>
+        <p class="p_description">
+          Foxholm is a luxury secondhand store based in Østerbro, Copenhagen.
+          When we first met the owner, Christina Reeves, the Webshop had close
+          to no income. She wanted our help to increase online sales and change
+          the visual ID to bring out more of her personality.
+        </p>
+      </div>
+    </section>
+
+    <section class="p_section">
+      <img
+        class="p_img fade_img"
+        src="images/f_design.webp"
+        alt="mockup of the landingpage of the website kattens vaern"
+      />
+
+      <div class="p_txt txt_left">
+        <h3>Design</h3>
+        <p>
+          After testing the existing site we discovered problems with the amount
+          of information on the Webshop, resulting in users feeling overwhelmed
+          and confused. Based on this, we decided make the Webshop feel lighter
+          by grouping information and simplify navigation to improve the user
+          experience.<br /><br />
+          Simple, neutral monochromatic colors were used as primary colors to
+          create a minimalistic look. The orange color symbolizes the Fox in the
+          company name. The name itself is inspired by Christina’s own last name
+          “reeves” which means fox. This way, we could use color to personalize
+          the Webshop. As a contrast to the warm, orange, we used blue to catch
+          the eye of the user.
+        </p>
+      </div>
+    </section>
+
+    <section class="p_section">
+      <img
+        class="p_img fade_img"
+        src="images/f_process.webp"
+        alt="mockup of the landingpage of the website kattens vaern"
+      />
+
+      <div class="p_txt">
+        <h3>Code</h3>
+        <p>
+          Our solution was built by creating our own customized WP child theme
+          with plugins such as “pods” installed. With this, we could use custom
+          pods to create buttons and products for the Webshop. <br /><br />
+          The filter buttons in the loop view were created using Custom Taxonomy
+          Pods. When customizing the child theme, we added event listeners to
+          the buttons to make them clickable. <br /><br />
+          To get the products we fetched the JSON data using async function and
+          WP REST API. Before coding we planned the layout of the website by
+          making wireframes and defined our final design with mockups.<br /><br />
+        </p>
+      </div>
+    </section>
+
+    <section class="p_link_bar">
+      <a href="hacked.html">
+        <div class="p_link_wrapper">
+          <img
+            class="p_link_arrow"
+            src="images/arrow_left.svg"
+            alt="go to project"
+          />
+          <div class="p_link_txt">
+            <p class="small_txt">view project</p>
+            <p class="p_link_title">Hacked Hogwarts</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="animation.html">
+        <div class="p_link_wrapper">
+          <div class="p_link_txt">
+            <p class="small_txt">view project</p>
+            <p class="p_link_title">Animation</p>
+          </div>
+          <img
+            class="p_link_arrow"
+            src="images/arrow.svg"
+            alt="go to project"
+          />
+        </div>
+      </a>
     </section>
 
     <footer>
@@ -289,4 +381,7 @@
       </div>
     </footer>
   </body>
+  <script src="js/scroll_section.js"></script>
+  <script src="js/txt_section.js"></script>
+  <script src="js/test.js"></script>
 </html>
