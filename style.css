@@ -118,6 +118,8 @@ section {
   padding-inline: 4vw;
 }
 
+/*----------buttons----------*/
+
 .btn {
   display: flex;
   justify-content: center;
@@ -132,7 +134,23 @@ section {
   color: var(--color-dark);
 }
 
-.pink_fill {
+.btn.pink,
+.btn.pink_fill {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.link:hover .btn.pink {
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.link:hover .btn.pink_fill {
+  background-color: #ffffff00;
+  color: var(--color-dark);
+}
+
+.pink_fill,
+.chosen {
   border: 2px solid #fe3371;
   background-color: var(--color-dark);
   color: white;
@@ -145,6 +163,18 @@ section {
   z-index: 100;
   height: 50px;
   width: 50px;
+}
+
+.logo img {
+  display: block;
+  z-index: 100;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.logo img:hover {
+  transform: rotate(360deg); /* Rotate 360 degrees on hover */
 }
 
 nav {
@@ -444,6 +474,7 @@ header {
 #contact {
   height: 100vh;
   width: 100vw;
+  flex-direction: column;
 }
 
 #contact h2 {
@@ -674,8 +705,7 @@ footer {
 .p_section.visible,
 .paragraph.visible,
 .fade-h2.visible,
-.fade-div.visible,
-.fade-section.visible {
+.fade-div.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1041,6 +1071,22 @@ footer {
   .paragraph_wrapper {
     flex-direction: row;
     gap: 3vw;
+    justify-content: center;
+  }
+
+  .paragraph {
+    width: 75ch;
+  }
+
+  .active_page {
+    font-family: var(--font-bold-paragraph);
+    cursor: default;
+    color: var(--color-dark);
+  }
+
+  .active_page:hover,
+  .active_page:visited {
+    color: var(--color-dark);
   }
 }
 
@@ -1088,6 +1134,27 @@ footer {
 
 /*--------------------wider screens-----------------*/
 @media screen and (min-aspect-ratio: 21/9) {
+  #tree {
+    max-height: 520px;
+  }
+
+  .paragraph {
+    width: 47ch;
+  }
+
+  .p_splash {
+    top: 8%;
+    max-width: 600px;
+  }
+
+  .p_description {
+    width: 46ch;
+  }
+
+  #intro h2,
+  #intro span {
+    font-size: 5rem;
+  }
 }
 
 /*--------------------animations-----------------*/
