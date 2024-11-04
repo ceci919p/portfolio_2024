@@ -41,8 +41,8 @@ function changeWord() {
     setTimeout(() => {
       introSpan.classList.remove("fade-in");
       isAnimating = false; // Allow the next animation to run
-    }, 600); // Match this to the transition duration (0.6s)
-  }, 600); // Match this to the transition duration (0.6s)
+    }, 400); // Match this to the transition duration (0.6s)
+  }, 400); // Match this to the transition duration (0.6s)
 }
 
 // Start the word change animation immediately
