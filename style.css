@@ -242,7 +242,7 @@ header {
   background-image: url(images/splash_v6_2560x1080_test.svg);
 
   width: 100vw;
-  height: 100vh;
+  height: 84.3vh;
   max-width: 100%;
   background-position: 79% 50%;
   background-repeat: no-repeat;
@@ -276,7 +276,7 @@ header {
 
 .fade_in_text {
   position: relative;
-  top: 68vh;
+  top: 61vh;
   color: var(--color-lighter);
   opacity: 0;
   animation: fadeIn 2s ease forwards;
@@ -684,6 +684,10 @@ footer {
   background-color: var(--color-lighter);
 }
 
+.link_container a {
+  text-decoration: underline;
+}
+
 /*----------------------------fade scroll effect-----------------------*/
 
 .fade-h2,
@@ -1012,9 +1016,11 @@ footer {
     padding-block-end: 2vh;
   }
 
-  footer p {
+  .link_container {
     grid-column: 2;
     justify-self: center;
+    display: flex;
+    gap: 3vw;
   }
 
   #socials_container {
