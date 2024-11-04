@@ -915,7 +915,7 @@ footer {
 
   #contact_btn {
     background-color: var(--color-darker);
-    color: var(--color-light);
+    color: var(--color-lighter);
     padding: 10px 20px;
     border-radius: 3px;
   }
