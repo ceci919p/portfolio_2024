@@ -240,7 +240,7 @@ nav {
 header {
   background-image: url(images/splash_v6_2560x1080_test.svg);
   height: 90.3vh;
-  width: 100vw;
+  width: 100%;
   background-position: 79% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -327,7 +327,7 @@ header {
 }
 
 #intro span {
-  font-size: 14.5vw;
+  font-size: 13.5vw;
   transition: opacity 0.6s ease, transform 0.6s ease;
   display: inline-block;
   font-family: var(--font-display);
@@ -405,6 +405,7 @@ header {
   background-color: var(--color-light);
   padding-block: 5vh;
   padding-inline: 5vw;
+
   margin-block: 0.5rem;
   color: var(--color-dark);
 }
@@ -590,7 +591,7 @@ header {
 .section_fill {
   padding-inline: 1.5vw;
   height: auto;
-  width: 100vw;
+  width: 100%;
   justify-items: center;
   align-items: center;
 }
@@ -601,14 +602,15 @@ header {
 
 .p_section_fill div {
   background-color: var(--color-light);
-  padding-block: 5vh;
-  padding-inline: 5vw;
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-block-start: 5vh;
   margin-block-end: 1vh;
+  padding-block: 5vh;
+  padding-inline: 5vw;
 }
 
 .p_img {
@@ -1069,13 +1071,8 @@ footer {
   }
 
   .paragraph_wrapper {
-    flex-direction: row;
-    gap: 3vw;
-    justify-content: center;
-  }
-
-  .paragraph {
-    width: 75ch;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .active_page {
